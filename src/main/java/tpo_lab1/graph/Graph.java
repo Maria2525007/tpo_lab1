@@ -61,7 +61,7 @@ public class Graph {
             throw new IllegalArgumentException("Dijkstra requires non-negative weights");
         }
         if (u == v) {
-            // петля допустима, но в типовой задаче не нужна; оставим как валидный кейс
+            // петля
             adj.get(u).add(new Edge(v, weight));
             return;
         }

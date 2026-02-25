@@ -24,7 +24,7 @@ public class Dijkstra {
 
     /**
      * Возвращает кратчайший путь и его длину.
-     * Если пути нет — Optional.empty().
+     * Если пути нет - Optional.empty()
      */
     public static Optional<PathResult> shortestPath(Graph graph, int start, int end) {
         Objects.requireNonNull(graph, "graph");
