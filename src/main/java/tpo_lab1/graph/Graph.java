@@ -47,9 +47,6 @@ public class Graph {
         return Collections.unmodifiableList(adj.get(v));
     }
 
-    /**
-     * Добавляет неориентированное ребро: u <-> v с весом weight.
-     */
     public void addEdge(int u, int v, double weight) {
         validateVertex(u);
         validateVertex(v);
@@ -61,7 +58,6 @@ public class Graph {
             throw new IllegalArgumentException("Dijkstra requires non-negative weights");
         }
         if (u == v) {
-            // петля
             adj.get(u).add(new Edge(v, weight));
             return;
         }

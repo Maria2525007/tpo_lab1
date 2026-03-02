@@ -24,7 +24,6 @@ public class SecSeries {
     }
 
     private static double cosSeries(double x) {
-        // Приводим x к диапазону [-π, π] для лучшей сходимости
         x = x % (2 * Math.PI);
         if (x > Math.PI) {
             x -= 2 * Math.PI;

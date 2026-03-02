@@ -10,11 +10,9 @@ public class Person {
     private boolean shocked;
     private boolean jawDropped;
 
-    // Для "двухголового" персонажа
     private Head leftHead;
     private Head rightHead;
 
-    // Для простоты: у любого Person есть левая рука (как флаг), чтобы проверять доменные запреты
     private boolean hasLeftHand = true;
 
     public Person(String name) {

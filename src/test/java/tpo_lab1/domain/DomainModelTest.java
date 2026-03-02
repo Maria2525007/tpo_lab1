@@ -1,5 +1,10 @@
 package tpo_lab1.domain;
 
+import io.qameta.allure.Feature;
+import io.qameta.allure.Link;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.Story;
 import org.junit.jupiter.api.Test;
 import tpo_lab1.domain.actions.EnterAction;
 import tpo_lab1.domain.actions.ObserveAction;
@@ -8,9 +13,14 @@ import tpo_lab1.domain.model.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@Feature("Доменная модель")
+@Story("Сценарий и правила домена")
+@Link(name = "Требование: доменная модель", url = "https://example.com/req/domain")
+@Severity(SeverityLevel.CRITICAL)
 class DomainModelTest {
 
     @Test
+    @Story("Счастливый путь сценария — корректные состояния")
     void scenario_happyPath_statesCorrect() {
         Person arthur = new Person("Артур");
         Person man = new Person("Человек");
@@ -23,7 +33,6 @@ class DomainModelTest {
 
         Scene scene = new Scene(arthur, man, chair, panel);
 
-        // действия по тексту
         man.pickTeethOfRightHeadWithLeftHand();
         man.smileLeftHead();
 
@@ -48,6 +57,8 @@ class DomainModelTest {
     }
 
     @Test
+    @Story("Правило: нельзя чистить зубы без левой руки")
+    @Severity(SeverityLevel.BLOCKER)
     void domainRule_cannotPickTeethWithoutLeftHand() {
         Person man = new Person("Человек");
         man.makeTwoHeaded();
@@ -57,6 +68,7 @@ class DomainModelTest {
     }
 
     @Test
+    @Story("Правило: действия двухголового только для двухголового")
     void domainRule_cannotUseTwoHeadedActionsIfNotTwoHeaded() {
         Person man = new Person("Человек");
 
@@ -65,6 +77,7 @@ class DomainModelTest {
     }
 
     @Test
+    @Story("Персона с пустым именем — исключение")
     void personWithEmptyName_shouldThrow() {
         assertThrows(DomainException.class,
                 () -> new Person(""));

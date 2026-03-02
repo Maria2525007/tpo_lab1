@@ -6,7 +6,6 @@ public class TouchAction implements Action {
 
     @Override
     public void apply(Scene scene) {
-        // "ноги на пульте"
         scene.getControlPanel().putLegsOnPanel();
         scene.incrementWeirdThings();
     }

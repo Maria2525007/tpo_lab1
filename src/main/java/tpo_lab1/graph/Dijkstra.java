@@ -22,10 +22,6 @@ public class Dijkstra {
         }
     }
 
-    /**
-     * Возвращает кратчайший путь и его длину.
-     * Если пути нет - Optional.empty()
-     */
     public static Optional<PathResult> shortestPath(Graph graph, int start, int end) {
         Objects.requireNonNull(graph, "graph");
 
@@ -68,7 +64,6 @@ public class Dijkstra {
                 }
                 double w = e.getWeight();
 
-                // веса уже проверяются в Graph.addEdge, но оставим защиту
                 if (w < 0) {
                     throw new IllegalArgumentException("negative edge weight");
                 }
@@ -101,7 +96,7 @@ public class Dijkstra {
             cur = prev[cur];
         }
         if (path.isEmpty() || path.getFirst() != start) {
-            return List.of(); // теоретически не должно случиться
+            return List.of();
         }
         return path;
     }
