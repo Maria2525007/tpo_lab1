@@ -15,7 +15,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @Feature("Доменная модель")
 @Story("Сценарий и правила домена")
-@Link(name = "Требование: доменная модель", url = "https://example.com/req/domain")
+@Link(name = "Требование: доменная модель", url = "https://se.ifmo.ru/courses/testing")
 @Severity(SeverityLevel.CRITICAL)
 class DomainModelTest {
 

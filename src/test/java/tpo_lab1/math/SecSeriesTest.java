@@ -15,7 +15,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @Feature("Математика")
 @Story("Функция sec — ряд и граничные случаи")
-@Link(name = "Требование: sec(x)", url = "https://example.com/req/sec")
+@Link(name = "Требование: sec(x)", url = "https://se.ifmo.ru/courses/testing")
 @Severity(SeverityLevel.CRITICAL)
 class SecSeriesTest {
 

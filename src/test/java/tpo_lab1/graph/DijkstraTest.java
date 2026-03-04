@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @Feature("Алгоритмы")
 @Story("Алгоритм Дейкстры — кратчайший путь в графе")
-@Link(name = "Требование: Dijkstra", url = "https://example.com/req/dijkstra")
+@Link(name = "Требование: Dijkstra", url = "https://se.ifmo.ru/courses/testing")
 @Severity(SeverityLevel.CRITICAL)
 class DijkstraTest {
 
