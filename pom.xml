@@ -63,8 +63,8 @@
                     </properties>
                     <systemProperties>
                         <allure.results.directory>${project.build.directory}/allure-results</allure.results.directory>
-                        <allure.link.issue.pattern>https://example.com/issue/{}</allure.link.issue.pattern>
-                        <allure.link.tms.pattern>https://example.com/tms/{}</allure.link.tms.pattern>
+                        <allure.link.issue.pattern>https://se.ifmo.ru/courses/testing{}</allure.link.issue.pattern>
+                        <allure.link.tms.pattern>https://se.ifmo.ru/courses/{}</allure.link.tms.pattern>
                     </systemProperties>
                 </configuration>
             </plugin>
